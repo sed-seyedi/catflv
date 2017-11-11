@@ -1,6 +1,6 @@
 # Catflv
 
-Concatenate .flv videos.
+Concatenate .flv videos. Tested on ffmpeg version `3.2`.
 
 ## How to use it?
 
