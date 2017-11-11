@@ -15,7 +15,7 @@ test $# -gt 1 || { echo "Not enough arguments. There is no point in concating le
 #### we should exit if such a file exists!
 #### it's possible to rewrite to a previous job
 if [ -e ./final.flv ]; then
-    (1>&2 echo "Please delete the old final.flv")
+    echo "Please delete the old final.flv" 1>&2
     exit 1
 fi
 ################
