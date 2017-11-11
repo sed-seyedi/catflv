@@ -17,8 +17,8 @@ Just copy `catflv.sh` in your $PATH and make sure it is executable.
 Example:
 
 ```
-$ chmod +x catflv.sh
-$ cp catflv.sh /usr/local/bin/catflv
+$ sudo chmod +x catflv.sh
+$ sudo cp catflv.sh /usr/local/bin/catflv
 ```
 
 In the above example, you must have `/usr/local/bin` in your $PATH. To check that run:
