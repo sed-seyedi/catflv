@@ -1,9 +1,15 @@
 #!/bin/sh
-#################
-# Concatenate FLV files using FFMPEG
-#################
+######################################
+# Concatenate FLV files using FFMPEG #
+######################################
+# Description:
+# Saves the result in final.flv in
+# current directory.
+################
 #### check if ffmpeg is installed
-command -v ffmpeg 1> /dev/null 2>&1 || { echo "Please install ffmpeg first" >&2; exit 1; }
+command -v ffmpeg 1> /dev/null 2>&1 || { echo "Please install ffmpeg first" 1>&2; exit 1; }
+#### check atleast 2 arguments is provided
+test $# -gt 1 || { echo "Not enough arguments. There is no point in concating less than 2 files." 1>&2; exit 1; }
 ################
 #### check if there is no  final.flv
 #### we should exit if such a file exists!
@@ -16,7 +22,7 @@ fi
 #### remove the old list of files
 test -e ./catflv_list.txt && rm catflv_list.txt;
 ################
-#### confirm list of files and write to a file
+#### save and confirm the list of files
 echo "List of flv files to concat:"
 printf "file './%s'\n" $@ | tee catflv_list.txt
 read -p "Do you confirm? [y/Y] " confirm
