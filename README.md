@@ -2,7 +2,7 @@
 
 Concatenate .flv videos.
 
-# How to use it?
+## How to use it?
 
 ```
 $ catflv *.flv
@@ -10,7 +10,7 @@ $ catflv *.flv
 
 Now you have a `final.flv` in that folder.
 
-# How to install it?
+## How to install it?
 
 Just copy `catflv.sh` in your $PATH and make sure it is executable.
 
